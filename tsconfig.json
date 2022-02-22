@@ -17,6 +17,10 @@
       "dom.iterable",
       "scripthost"],
     "types": ["vite/client"],
+    "paths": {
+      "/@/*": ["src/*"],
+      "/#/*": ["types/*"]
+    },
     "plugins": [{ "name": "@vuedx/typescript-plugin-vue" }]
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],

@@ -8,7 +8,7 @@ const routes = [
   {
     path: '/',
     meta: { title: 'Home' },
-    component: () => import('../views/Home.vue'),
+    component: () => import('../views/design.vue'),
   },
   {
     path: '/about',

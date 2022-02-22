@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Header from '@/components/home/header.vue'
+import Header from '/@/components/desigin/header.vue'
 export default defineComponent({
     name: 'Home',
     components: {
