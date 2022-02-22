@@ -1,5 +1,4 @@
 import type { PropType } from 'vue';
-import buttonProps from "ant-design-vue/lib/button/buttonTypes"
 const ButtonProps = {
     buttonType: {
         type: String as PropType<'click' | 'hover'>,
@@ -13,17 +12,10 @@ const ButtonProps = {
         type: String,
         default: "#2DABFF",
     },
-    textColor: {
-        type: String,
-        default: "#FFFFFF"
-    },
-    defaultActive: {
+    active: { //仅在click状态下有效
         type: Boolean,
         default: false
     },
-
-
-    ...buttonProps
 }
 
 export default ButtonProps;
