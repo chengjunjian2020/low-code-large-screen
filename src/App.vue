@@ -6,4 +6,6 @@
   </main>
 </template>
 
-<style></style>
+<style lang="less">
+@import "./common/less/index.less";
+</style>

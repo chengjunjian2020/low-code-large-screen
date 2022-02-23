@@ -29,7 +29,6 @@ console.log(Button)
 .desigin-header {
     display: flex;
     width: 100%;
-    position: fixed;
     height: 40px;
     line-height: 40px;
     padding: 0;

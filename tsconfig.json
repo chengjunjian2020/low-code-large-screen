@@ -12,7 +12,7 @@
     "jsx": "preserve",
     "sourceMap": true,
     "baseUrl": ".",
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "lib": ["esnext", "dom",
       "dom.iterable",
       "scripthost"],

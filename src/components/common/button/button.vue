@@ -19,7 +19,7 @@ watch(props, (val) => {
     immediate: true,
 })
 const buttonStyle = computed(() => {
-    if (active.value) {
+    if (active.value && props.buttonType === "click") {
         return {
             backgroundColor: props.buttonBackground,
             borderColor: props.buttonBorderColor
