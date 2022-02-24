@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import { resolve } from 'path';
 import path from 'path';
 
@@ -15,9 +16,12 @@ export default defineConfig({
     vue(),
     Components({
       resolvers: [
-        AntDesignVueResolver(),
+        ElementPlusResolver()
       ],
       dts: true,
+    }),
+    AutoImport({
+      resolvers: [ElementPlusResolver()],
     }),
     createSvgIconsPlugin({
       // Specify the icon folder to be cached

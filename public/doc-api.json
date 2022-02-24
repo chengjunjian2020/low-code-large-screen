@@ -1,0 +1,815 @@
+{
+  "children": [{
+      "type": [
+        "Object"
+      ],
+      "isObject": true,
+      "prop": "echarts",
+      "children": [{
+          "type": [
+            "Function"
+          ],
+          "prop": "init",
+          "path": "echarts.init"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "connect",
+          "path": "echarts.connect"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "disconnect",
+          "path": "echarts.disconnect"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "dispose",
+          "path": "echarts.dispose"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "getInstanceByDom",
+          "path": "echarts.getInstanceByDom"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "use",
+          "path": "echarts.use"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "registerMap",
+          "path": "echarts.registerMap"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "getMap",
+          "path": "echarts.getMap"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "registerTheme",
+          "path": "echarts.registerTheme"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "registerLocale",
+          "path": "echarts.registerLocale"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "setPlatformAPI",
+          "path": "echarts.setPlatformAPI"
+        },
+        {
+          "type": [
+            "any"
+          ],
+          "isObject": true,
+          "prop": "graphic",
+          "children": [{
+              "type": [
+                "Function"
+              ],
+              "prop": "extendShape",
+              "path": "echarts.graphic.extendShape"
+            },
+            {
+              "type": [
+                "Function"
+              ],
+              "prop": "registerShape",
+              "path": "echarts.graphic.registerShape"
+            },
+            {
+              "type": [
+                "Function"
+              ],
+              "prop": "getShapeClass",
+              "path": "echarts.graphic.getShapeClass"
+            },
+            {
+              "type": [
+                "Function"
+              ],
+              "prop": "clipPointsByRect",
+              "path": "echarts.graphic.clipPointsByRect"
+            },
+            {
+              "type": [
+                "Function"
+              ],
+              "prop": "clipRectByRect",
+              "path": "echarts.graphic.clipRectByRect"
+            }
+          ],
+          "path": "echarts.graphic"
+        }
+      ],
+      "path": "echarts"
+    },
+    {
+      "type": [
+        "Object"
+      ],
+      "isObject": true,
+      "prop": "echartsInstance",
+      "children": [{
+          "type": [
+            "string",
+            "number"
+          ],
+          "prop": "group",
+          "path": "echartsInstance.group"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "setOption",
+          "path": "echartsInstance.setOption"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "getWidth",
+          "path": "echartsInstance.getWidth"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "getHeight",
+          "path": "echartsInstance.getHeight"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "getDom",
+          "path": "echartsInstance.getDom"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "getOption",
+          "path": "echartsInstance.getOption"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "resize",
+          "path": "echartsInstance.resize"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "renderToSVGString",
+          "path": "echartsInstance.renderToSVGString"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "dispatchAction",
+          "path": "echartsInstance.dispatchAction"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "on",
+          "path": "echartsInstance.on"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "off",
+          "path": "echartsInstance.off"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "convertToPixel",
+          "path": "echartsInstance.convertToPixel"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "convertFromPixel",
+          "path": "echartsInstance.convertFromPixel"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "containPixel",
+          "path": "echartsInstance.containPixel"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "showLoading",
+          "path": "echartsInstance.showLoading"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "hideLoading",
+          "path": "echartsInstance.hideLoading"
+        },
+        {
+          "type": [
+            "Function"
+          ],
+          "prop": "getDataURL",
+          "path": "echartsInstance.getDataURL"
+        },
+        {
+          "type": [
+            "any"
+          ],
+          "prop": "getConnectedDataURL",
+          "path": "echartsInstance.getConnectedDataURL"
+        },
+        {
+          "type": [
+            "any"
+          ],
+          "prop": "appendData",
+          "path": "echartsInstance.appendData"
+        },
+        {
+          "type": [
+            "any"
+          ],
+          "prop": "clear",
+          "path": "echartsInstance.clear"
+        },
+        {
+          "type": [
+            "any"
+          ],
+          "prop": "isDisposed",
+          "path": "echartsInstance.isDisposed"
+        },
+        {
+          "type": [
+            "any"
+          ],
+          "prop": "dispose",
+          "path": "echartsInstance.dispose"
+        }
+      ],
+      "path": "echartsInstance"
+    },
+    {
+      "type": [
+        "any"
+      ],
+      "isObject": true,
+      "prop": "action",
+      "children": [{
+          "type": [
+            "Action"
+          ],
+          "prop": "highlight",
+          "path": "action.highlight"
+        },
+        {
+          "type": [
+            "Action"
+          ],
+          "prop": "downplay",
+          "path": "action.downplay"
+        },
+        {
+          "type": [
+            "Action"
+          ],
+          "prop": "select",
+          "path": "action.select"
+        },
+        {
+          "type": [
+            "Action"
+          ],
+          "prop": "unselect",
+          "path": "action.unselect"
+        },
+        {
+          "type": [
+            "Action"
+          ],
+          "prop": "toggleSelected",
+          "path": "action.toggleSelected"
+        },
+        {
+          "type": [
+            "any"
+          ],
+          "isObject": true,
+          "prop": "legend",
+          "children": [{
+              "type": [
+                "Action"
+              ],
+              "prop": "legendSelect",
+              "path": "action.legend.legendSelect"
+            },
+            {
+              "type": [
+                "Action"
+              ],
+              "prop": "legendUnSelect",
+              "path": "action.legend.legendUnSelect"
+            },
+            {
+              "type": [
+                "Action"
+              ],
+              "prop": "legendToggleSelect",
+              "path": "action.legend.legendToggleSelect"
+            },
+            {
+              "type": [
+                "Action"
+              ],
+              "prop": "legendAllSelect",
+              "path": "action.legend.legendAllSelect"
+            },
+            {
+              "type": [
+                "Action"
+              ],
+              "prop": "legendInverseSelect",
+              "path": "action.legend.legendInverseSelect"
+            },
+            {
+              "type": [
+                "Action"
+              ],
+              "prop": "legendScroll",
+              "path": "action.legend.legendScroll"
+            }
+          ],
+          "path": "action.legend"
+        },
+        {
+          "type": [
+            "any"
+          ],
+          "isObject": true,
+          "prop": "tooltip",
+          "children": [{
+              "type": [
+                "Action"
+              ],
+              "prop": "showTip",
+              "path": "action.tooltip.showTip"
+            },
+            {
+              "type": [
+                "Action"
+              ],
+              "prop": "hideTip",
+              "path": "action.tooltip.hideTip"
+            }
+          ],
+          "path": "action.tooltip"
+        },
+        {
+          "type": [
+            "any"
+          ],
+          "isObject": true,
+          "prop": "dataZoom",
+          "children": [{
+              "type": [
+                "Action"
+              ],
+              "prop": "dataZoom",
+              "path": "action.dataZoom.dataZoom"
+            },
+            {
+              "type": [
+                "Action"
+              ],
+              "prop": "takeGlobalCursor",
+              "path": "action.dataZoom.takeGlobalCursor"
+            }
+          ],
+          "path": "action.dataZoom"
+        },
+        {
+          "type": [
+            "any"
+          ],
+          "isObject": true,
+          "prop": "visualMap",
+          "children": [{
+            "type": [
+              "Action"
+            ],
+            "prop": "selectDataRange",
+            "path": "action.visualMap.selectDataRange"
+          }],
+          "path": "action.visualMap"
+        },
+        {
+          "type": [
+            "any"
+          ],
+          "isObject": true,
+          "prop": "timeline",
+          "children": [{
+              "type": [
+                "Action"
+              ],
+              "prop": "timelineChange",
+              "path": "action.timeline.timelineChange"
+            },
+            {
+              "type": [
+                "Action"
+              ],
+              "prop": "timelinePlayChange",
+              "path": "action.timeline.timelinePlayChange"
+            }
+          ],
+          "path": "action.timeline"
+        },
+        {
+          "type": [
+            "any"
+          ],
+          "isObject": true,
+          "prop": "toolbox",
+          "children": [{
+            "type": [
+              "Action"
+            ],
+            "prop": "restore",
+            "path": "action.toolbox.restore"
+          }],
+          "path": "action.toolbox"
+        },
+        {
+          "type": [
+            "any"
+          ],
+          "isObject": true,
+          "prop": "geo",
+          "children": [{
+              "type": [
+                "Action"
+              ],
+              "prop": "geoSelect",
+              "path": "action.geo.geoSelect"
+            },
+            {
+              "type": [
+                "Action"
+              ],
+              "prop": "geoUnSelect",
+              "path": "action.geo.geoUnSelect"
+            },
+            {
+              "type": [
+                "Action"
+              ],
+              "prop": "geoToggleSelect",
+              "path": "action.geo.geoToggleSelect"
+            }
+          ],
+          "path": "action.geo"
+        },
+        {
+          "type": [
+            "any"
+          ],
+          "isObject": true,
+          "prop": "brush",
+          "children": [{
+              "type": [
+                "any"
+              ],
+              "prop": "brush",
+              "path": "action.brush.brush"
+            },
+            {
+              "type": [
+                "any"
+              ],
+              "prop": "brushEnd",
+              "path": "action.brush.brushEnd"
+            },
+            {
+              "type": [
+                "any"
+              ],
+              "prop": "takeGlobalCursor",
+              "path": "action.brush.takeGlobalCursor"
+            }
+          ],
+          "path": "action.brush"
+        }
+      ],
+      "path": "action"
+    },
+    {
+      "type": [
+        "any"
+      ],
+      "isObject": true,
+      "prop": "events",
+      "children": [{
+          "type": [
+            "any"
+          ],
+          "isObject": true,
+          "prop": "鼠标事件",
+          "children": [{
+              "type": [
+                "Event"
+              ],
+              "prop": "click",
+              "path": "events.鼠标事件.click"
+            },
+            {
+              "type": [
+                "Event"
+              ],
+              "prop": "dblclick",
+              "path": "events.鼠标事件.dblclick"
+            },
+            {
+              "type": [
+                "Event"
+              ],
+              "prop": "mousedown",
+              "path": "events.鼠标事件.mousedown"
+            },
+            {
+              "type": [
+                "Event"
+              ],
+              "prop": "mousemove",
+              "path": "events.鼠标事件.mousemove"
+            },
+            {
+              "type": [
+                "Event"
+              ],
+              "prop": "mouseup",
+              "path": "events.鼠标事件.mouseup"
+            },
+            {
+              "type": [
+                "Event"
+              ],
+              "prop": "mouseover",
+              "path": "events.鼠标事件.mouseover"
+            },
+            {
+              "type": [
+                "Event"
+              ],
+              "prop": "mouseout",
+              "path": "events.鼠标事件.mouseout"
+            },
+            {
+              "type": [
+                "Event"
+              ],
+              "prop": "globalout",
+              "path": "events.鼠标事件.globalout"
+            },
+            {
+              "type": [
+                "Event"
+              ],
+              "prop": "contextmenu",
+              "path": "events.鼠标事件.contextmenu"
+            }
+          ],
+          "path": "events.鼠标事件"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "highlight",
+          "path": "events.highlight"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "downplay",
+          "path": "events.downplay"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "selectchanged",
+          "path": "events.selectchanged"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "legendselectchanged",
+          "path": "events.legendselectchanged"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "legendselected",
+          "path": "events.legendselected"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "legendunselected",
+          "path": "events.legendunselected"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "legendselectall",
+          "path": "events.legendselectall"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "legendinverseselect",
+          "path": "events.legendinverseselect"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "legendscroll",
+          "path": "events.legendscroll"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "datazoom",
+          "path": "events.datazoom"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "datarangeselected",
+          "path": "events.datarangeselected"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "timelinechanged",
+          "path": "events.timelinechanged"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "timelineplaychanged",
+          "path": "events.timelineplaychanged"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "restore",
+          "path": "events.restore"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "dataviewchanged",
+          "path": "events.dataviewchanged"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "magictypechanged",
+          "path": "events.magictypechanged"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "geoselectchanged",
+          "path": "events.geoselectchanged"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "geoselected",
+          "path": "events.geoselected"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "geounselected",
+          "path": "events.geounselected"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "axisareaselected",
+          "path": "events.axisareaselected"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "brush",
+          "path": "events.brush"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "brushEnd",
+          "path": "events.brushEnd"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "brushselected",
+          "path": "events.brushselected"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "globalcursortaken",
+          "path": "events.globalcursortaken"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "rendered",
+          "path": "events.rendered"
+        },
+        {
+          "type": [
+            "Event"
+          ],
+          "prop": "finished",
+          "path": "events.finished"
+        }
+      ],
+      "path": "events"
+    }
+  ],
+  "isRoot": true
+}

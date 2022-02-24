@@ -1,33 +1,36 @@
 <template>
-    <a-collapse class="collapse-wrapper" v-model="collapseActive" :bordered="false">
-        <template #expandIcon="{ isActive }">
-            <caret-right-outlined style="color: #fff" :rotate="isActive ? 90 : 0" />
-        </template>
-        <a-collapse-panel
-            v-for="category in menuList"
-            :key="category.categoryName"
-            :header="category.categoryName"
-        >
+    <Collapse :collapseList="menuList">
+        <template v-slot="item">
             <div
                 class="menu-item flex flex-col"
-                v-for="(menu, index) in category.list"
+                v-for="(component, index) in item.collapseItems"
                 :key="index"
             >
-                <img :src="menu.img" />
-                <span class="menu">{{ menu.name }}</span>
+                <img :src="component.img" />
+                <span class="menu">{{ component.name }}</span>
             </div>
-        </a-collapse-panel>
-    </a-collapse>
+        </template>
+    </Collapse>
+    <!-- <el-collapse class="collapse-wrapper" accordion v-model="collapseActive">
+        <el-collapse-item v-for="category in menuList" :key="category.categoryName">
+            <template #title>
+                <el-icon class="header-icon">
+                    <caret-right />
+                </el-icon>
+                {{ category.categoryName }}
+            </template>
+        </el-collapse-item>
+    </el-collapse>-->
 </template>
 
 <script lang="ts" setup>
 import { ref, reactive } from "vue"
-import { CaretRightOutlined } from '@ant-design/icons-vue';
 import lineCharts from "/@/assets/line.png"
+import { Collapse } from "/@/components/common/"
 const collapseActive = ref(0);
 const menuList = reactive([
     {
-        categoryName: "全部",
+        title: "全部",
         list: [
             {
                 img: lineCharts,
@@ -48,7 +51,7 @@ const menuList = reactive([
         ]
     },
     {
-        categoryName: "线状图",
+        title: "线状图",
         list: [
             {
                 img: lineCharts,
@@ -72,45 +75,76 @@ const menuList = reactive([
 </script>
 
 <style lang="less" scoped>
-.collapse-wrapper {
-    background-color: #22242a;
-    border: none;
-    .ant-collapse-item {
-        border-bottom: none;
-        ::v-deep .ant-collapse-header {
-            padding: 7px 16px;
-            padding-left: 20px;
-            color: #fff;
-            font-size: 12px;
-            border: 1px solid #2c2e34;
-            background-color: #22242a;
-            .anticon {
-                left: 0;
-            }
-        }
-        ::v-deep .ant-collapse-content {
-            background-color: #22242a;
-            .ant-collapse-content-box {
-                display: flex;
-                justify-content: space-evenly;
-                flex-wrap: wrap;
-                padding: 0;
-                padding-top: 10px;
-                .menu-item {
-                    margin: 5px 0px;
-                    flex- img {
-                        width: 75px;
-                        height: 50px;
-                    }
-                    .menu {
-                        color: #e9e9e9;
-                        font-size: 12px;
-                        padding-left: 6px;
-                        margin: 8px 0;
-                    }
-                }
-            }
-        }
+// .collapse-wrapper {
+//     // background-color: #22242a;
+//     border: none;
+//     .el-collapse-item {
+//         border-bottom: none;
+//         :deep(.el-collapse-item__header) {
+//             transition: all 0.5s;
+
+//             padding: 7px 10px;
+//             color: #fff;
+//             font-size: 12px;
+//             border: 1px solid #2c2e34;
+//             background-color: #22242a;
+//             .header-icon {
+//                 width: 14px;
+//                 height: 14px;
+//                 svg {
+//                     width: 100%;
+//                     height: 100%;
+//                 }
+//                 margin-right: 10px;
+//             }
+//             .el-collapse-item__arrow {
+//                 display: none;
+//             }
+//             &.is-active {
+//                 .header-icon {
+//                     transform: rotate(90deg);
+//                 }
+//             }
+//         }
+//         :deep(.el-collapse-item__wrap) {
+//             background-color: #22242a;
+//             border: none;
+//             .el-collapse-item__content {
+//                 // .ant-collapse-content-box {
+//                 display: flex;
+//                 justify-content: space-evenly;
+//                 flex-wrap: wrap;
+//                 padding: 0;
+//                 padding-top: 10px;
+//                 .menu-item {
+//                     margin: 5px 0px;
+//                     flex- img {
+//                         width: 75px;
+//                         height: 50px;
+//                     }
+//                     .menu {
+//                         color: #e9e9e9;
+//                         font-size: 12px;
+//                         padding-left: 6px;
+//                         margin: 8px 0;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+.menu-item {
+    margin: 5px 0px;
+    flex- img {
+        width: 75px;
+        height: 50px;
+    }
+    .menu {
+        color: #e9e9e9;
+        font-size: 12px;
+        padding-left: 6px;
+        margin: 8px 0;
     }
 }
 </style>

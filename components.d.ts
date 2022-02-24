@@ -4,12 +4,15 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    ACollapse: typeof import('ant-design-vue/es')['Collapse']
-    ACollapsePanel: typeof import('ant-design-vue/es')['CollapsePanel']
     Button: typeof import('./src/components/common/button/button.vue')['default']
+    Collapse: typeof import('./src/components/common/collapse/collapse.vue')['default']
     ComponentMenu: typeof import('./src/components/desigin/editor/component/component/component-menu.vue')['default']
     Editor: typeof import('./src/components/desigin/editor/index.vue')['default']
+    ElCollapse: typeof import('element-plus/es')['ElCollapse']
+    ElCollapseItem: typeof import('element-plus/es')['ElCollapseItem']
+    ElIcon: typeof import('element-plus/es')['ElIcon']
     Header: typeof import('./src/components/desigin/header.vue')['default']
+    InputNumber: typeof import('./src/components/common/inputNumber/inputNumber.vue')['default']
     Layer: typeof import('./src/components/desigin/editor/component/component/layer.vue')['default']
     LeftComponent: typeof import('./src/components/desigin/editor/component/left-component.vue')['default']
     Nav: typeof import('./src/components/desigin/editor/component/component/nav.vue')['default']

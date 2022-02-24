@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Nav, ComponentMenu, Layer } from "./component/index.ts";
+import { Nav, ComponentMenu, Layer } from "./component/index";
 </script>
 
 <style lang="less" scoped>

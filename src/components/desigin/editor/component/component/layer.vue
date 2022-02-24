@@ -2,7 +2,10 @@
     <div class="left-layer">
         <div class="left-title">图层</div>
         <div class="layer-command-list flex items-center justify-items-start">
-            <DeleteOutlined class="icon" />
+            <!-- <DeleteOutlined class="icon" /> -->
+            <el-icon>
+                <Delete />
+            </el-icon>
         </div>
         <div class="layer-list">
             <div
@@ -20,10 +23,12 @@
 </template>
 
 <script lang="ts" setup>
-import { DeleteOutlined } from "@ant-design/icons-vue";
+import { ElIcon } from 'element-plus';
+import { Delete } from "@element-plus/icons-vue";
 import { reactive, ref } from "vue";
 import { layerProps } from "./props";
 import line from "/@/assets/line.png";
+
 const activeLayer = ref();
 const layerList: Array<layerProps> = reactive(
     [
@@ -57,7 +62,7 @@ const selectLayer = (layer: layerProps) => {
         padding: 0 15px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         .icon {
-            font-size: 12px;
+            font-size: 16px;
             color: #b3b3b3;
             &:hover {
                 opacity: 0.9;
