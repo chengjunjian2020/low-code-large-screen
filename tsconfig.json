@@ -5,6 +5,7 @@
     "importHelpers": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
     "isolatedModules": true,
@@ -23,7 +24,7 @@
     },
     "plugins": [{ "name": "@vuedx/typescript-plugin-vue" }]
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/common/utils/Validator.js"],
   "exclude": [
     "node_modules"
   ]

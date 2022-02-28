@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import emitter from '@/common/utils/mitt'
+import emitter from '@/common/utils/mitt';
 import { computed, defineComponent, reactive } from 'vue'
 
 export default defineComponent({
@@ -18,7 +18,7 @@ export default defineComponent({
             //     get: () =>
             // })
         })
-        emitter.on('tab-value', (value) => {})
+        emitter.on('tab-value', (value) => { })
     },
 })
 </script>
