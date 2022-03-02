@@ -23,13 +23,15 @@
       </el-form-item>
       <!-- action="https://www.fastmock.site/mock/d9951708e0aba5f81b6d8ea609ce3196/low-code/upload" -->
     </el-form>
+    <tree :data="echartsOptions" :props="props" :height="208"></tree>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { inputNumber, colorPicker, upload, Select, Input, Radio } from '/@/components/common';
+import { inputNumber, colorPicker, upload, Select, Input, Radio, tree } from '/@/components/common';
 import { reactive, ref } from "vue";
-
+import echartsOptions from "../../public/echarts-options";
+// import { v4 as uuidv4 } from 'uuid';
 const modelValue = ref(0);
 const colorValue = ref("");
 const selectValue = ref();
@@ -43,6 +45,16 @@ const selectList = reactive([
     value: "宋体",
   }
 ]);
+const getKey = (prefix: string, id: number) => {
+  return `${prefix}-${id}`
+}
+
+
+const props = {
+  value: 'id',
+  label: 'label',
+  children: 'children',
+}
 // import docOptions from "../../public/doc-options.json";
 // let count = 0;
 // function recursion(list: Array<any>) {

@@ -6,6 +6,7 @@ import upload from "./upload/upload.vue"
 import Select from "./select/select.vue"
 import Input from "./input/input";
 import Radio from "./radio/radio";
+import tree from "./tree/tree.vue";
 export {
     Button,
     Collapse,
@@ -14,5 +15,6 @@ export {
     upload,
     Select,
     Input,
-    Radio
+    Radio,
+    tree
 }

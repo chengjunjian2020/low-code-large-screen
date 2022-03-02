@@ -3,7 +3,7 @@
 import { ref, Ref, defineComponent, watch } from "vue";
 import { ElInput } from "element-plus";
 import { inputProps } from "element-plus/lib/components/input/index";
-import 'element-plus/es/components/color-picker/style/css'
+import 'element-plus/es/components/input/style/css'
 import "./input.less";
 export default defineComponent({
     name: "color",

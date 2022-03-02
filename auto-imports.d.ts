@@ -9,6 +9,7 @@ declare global {
   const ElInputNumber: typeof import('element-plus/es')['ElInputNumber']
   const ElOption: typeof import('element-plus/es')['ElOption']
   const ElSelect: typeof import('element-plus/es')['ElSelect']
+  const ElTreeV2: typeof import('element-plus/es')['ElTreeV2']
   const ElUpload: typeof import('element-plus/es')['ElUpload']
 }
 export {}
