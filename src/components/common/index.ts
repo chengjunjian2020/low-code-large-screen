@@ -6,6 +6,8 @@ import upload from "./upload/upload.vue"
 import Select from "./select/select.vue"
 import Input from "./input/input";
 import Radio from "./radio/radio";
+import Checkbox from "./checkbox/checkbox";
+import virtualTree from "./virtualTree/virtualTree.vue";
 export {
     Button,
     Collapse,
@@ -14,5 +16,7 @@ export {
     upload,
     Select,
     Input,
-    Radio
+    Radio,
+    Checkbox,
+    virtualTree
 }

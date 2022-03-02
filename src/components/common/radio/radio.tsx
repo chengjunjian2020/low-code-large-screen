@@ -16,7 +16,6 @@ export default defineComponent({
             context.emit("update:modelValue", val);
         }, { immediate: true })
         const { size, radioList } = props;
-        console.log(size);
         return () => <ElRadioGroup class={"low-code-group-radio"} size={size} v-model={radioValue.value}>
             {
                 radioList.map((item, index) => <ElRadio class={"low-code-radio"} key={index} label={item.value}>{item.name}</ElRadio>)

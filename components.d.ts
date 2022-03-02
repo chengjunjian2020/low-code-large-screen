@@ -22,11 +22,11 @@ declare module 'vue' {
     Layer: typeof import('./src/components/desigin/editor/component/component/layer.vue')['default']
     LeftComponent: typeof import('./src/components/desigin/editor/component/left-component.vue')['default']
     Nav: typeof import('./src/components/desigin/editor/component/component/nav.vue')['default']
-    Radio: typeof import('./src/components/common/radio/radio.vue')['default']
     Select: typeof import('./src/components/common/select/select.vue')['default']
     TabPane: typeof import('./src/components/tabs/tab-pane.vue')['default']
     Tabs: typeof import('./src/components/tabs/tabs.vue')['default']
     Upload: typeof import('./src/components/common/upload/upload.vue')['default']
+    VirtualTree: typeof import('./src/components/common/virtualTree/virtualTree.vue')['default']
   }
 }
 

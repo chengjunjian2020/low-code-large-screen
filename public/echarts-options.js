@@ -1370,3 +1370,5 @@ let echartsOptions = [
     ],
   },
 ]
+
+export default echartsOptions

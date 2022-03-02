@@ -18,21 +18,22 @@
       <el-form-item label="字体xx">
         <Input v-model="selectValue"></Input>
       </el-form-item>
-      <el-form-item label="字体xx">
-        <Radio v-model="selectValue" :radioList="selectList"></Radio>
+      <el-form-item label="字体x11sx">
+        <Checkbox v-model="selectValue"></Checkbox>
       </el-form-item>
       <!-- action="https://www.fastmock.site/mock/d9951708e0aba5f81b6d8ea609ce3196/low-code/upload" -->
     </el-form>
+    <virtualTree :data="optionData"></virtualTree>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { inputNumber, colorPicker, upload, Select, Input, Radio } from '/@/components/common';
+import { inputNumber, colorPicker, upload, Select, Input, Checkbox, virtualTree } from '/@/components/common';
+import optionData from "../../public/echarts-options.js";
 import { reactive, ref } from "vue";
-
 const modelValue = ref(0);
 const colorValue = ref("");
-const selectValue = ref();
+const selectValue = ref(false);
 const selectList = reactive([
   {
     name: "微软雅黑",
