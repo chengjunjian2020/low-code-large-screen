@@ -2,7 +2,6 @@
     <el-tabs v-model="tabsValue" class="low-code-tree-tabs">
         <el-tab-pane label="样式" name="1"></el-tab-pane>
         <el-tab-pane label="数据" name="2"></el-tab-pane>
-        <!-- <el-tab-pane label="Role" name="third"></el-tab-pane> -->
     </el-tabs>
 </template>
 
