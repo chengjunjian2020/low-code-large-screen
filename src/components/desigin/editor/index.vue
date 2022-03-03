@@ -1,13 +1,18 @@
 <template>
     <div class="low-code-editor flex">
-        <leftComponent></leftComponent>
+        <div class="left-wrapper">
+            <leftComponent></leftComponent>
+        </div>
         <div class="center-desigin"></div>
-        <div class="setting-wrapper"></div>
+        <div class="setting-wrapper">
+            <settingPanel></settingPanel>
+        </div>
     </div>
 </template>
 
 <script lang="ts" setup>
 import leftComponent from "./component/left-component.vue";
+import settingPanel from "./component/setting-panel.vue";
 </script>
 
 <style lang="less" scoped>
@@ -15,5 +20,14 @@ import leftComponent from "./component/left-component.vue";
     position: absolute;
     left: 0;
     height: calc(100% - 40px);
+    .left-wrapper {
+        width: 410px;
+    }
+    .center-desigin {
+        width: calc(100vw - 410px - 310px);
+    }
+    .setting-wrapper {
+        width: 310px;
+    }
 }
 </style>

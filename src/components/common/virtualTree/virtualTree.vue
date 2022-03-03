@@ -5,7 +5,6 @@
             <div :class="nodeClass(node.data)"></div>
         </template>
     </el-tree-v2>
-    <!-- <el-tree-v2 :data="datas" :height="208"></el-tree-v2> -->
 </template>
 
 <script lang="ts" setup>
