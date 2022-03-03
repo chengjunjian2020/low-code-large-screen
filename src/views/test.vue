@@ -1,79 +1,55 @@
 <template>
-  <div>
-    <el-form ref="formRef" label-width="30px" label-position="left">
-      <el-form-item label="宽">
-        <input-number v-model="modelValue" style="width:100px" />
-      </el-form-item>
-      <el-form-item label="颜色">
-        <color-picker v-model="colorValue" />
-      </el-form-item>
-      <el-form-item label="图片">
-        <upload
-          action="https://www.fastmock.site/mock/d9951708e0aba5f81b6d8ea609ce3196/low-code/upload"
-        />
-      </el-form-item>
-      <el-form-item label="字体">
-        <Select v-model="selectValue" :selectList="selectList"></Select>
-      </el-form-item>
-      <el-form-item label="字体xx">
-        <Input v-model="selectValue"></Input>
-      </el-form-item>
-      <el-form-item label="字体xx">
-        <Radio v-model="selectValue" :radioList="selectList"></Radio>
-      </el-form-item>
-      <!-- action="https://www.fastmock.site/mock/d9951708e0aba5f81b6d8ea609ce3196/low-code/upload" -->
-    </el-form>
-    <tree :data="echartsOptions" :props="props" :height="208"></tree>
+  <div class="container">
+    <virtualTree :data="echartsOption" :height="208"></virtualTree>
   </div>
 </template>
-
 <script lang="ts" setup>
-import { inputNumber, colorPicker, upload, Select, Input, Radio, tree } from '/@/components/common';
-import { reactive, ref } from "vue";
-import echartsOptions from "../../public/echarts-options";
-// import { v4 as uuidv4 } from 'uuid';
-const modelValue = ref(0);
-const colorValue = ref("");
-const selectValue = ref();
-const selectList = reactive([
-  {
-    name: "微软雅黑",
-    value: "微软雅黑",
-  },
-  {
-    name: "宋体",
-    value: "宋体",
-  }
-]);
+import echartsOption from "../../public/echarts-options";
+import { virtualTree } from "/@/components/common/";
+interface Tree {
+  id: string
+  label: string
+  children?: Tree[]
+}
+
 const getKey = (prefix: string, id: number) => {
   return `${prefix}-${id}`
 }
 
-
+const createData = (
+  maxDeep: number,
+  maxChildren: number,
+  minNodesNumber: number,
+  deep = 1,
+  key = 'node'
+): Tree[] => {
+  let id = 0
+  return new Array(minNodesNumber).fill(deep).map(() => {
+    const childrenNumber =
+      deep === maxDeep ? 0 : Math.round(Math.random() * maxChildren)
+    const nodeKey = getKey(key, ++id)
+    return {
+      id: nodeKey,
+      label: nodeKey,
+      children: childrenNumber
+        ? createData(maxDeep, maxChildren, childrenNumber, deep + 1, nodeKey)
+        : undefined,
+    }
+  })
+}
 const props = {
   value: 'id',
   label: 'label',
   children: 'children',
 }
-// import docOptions from "../../public/doc-options.json";
-// let count = 0;
-// function recursion(list: Array<any>) {
-//   list.forEach((item: any) => {
-//     count++;
-//     console.log(item)
-//     if (item && item.children && item.children.length > 0) {
-//       recursion(item.children);
-//     }
-//   })
-// }
-// recursion(docOptions.children)
-// console.log(count);
+const data = createData(4, 30, 40)
+console.log(echartsOption);
 </script>
 
-<style lang="less">
-.label-text {
-  font-size: 12px;
-  color: #fff;
-  margin-right: 12px;
+<style lang="less" scoped>
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: #2e3134;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <el-select
         v-model="selectValue"
-        v-on:change="changeSelect"
+        @change="changeSelect"
         class="low-code-select"
         :filterable="filterable"
         :allow-create="allowCreate"
@@ -22,8 +22,8 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 import { selectProps } from "./props";
-defineProps(selectProps);
-const selectValue = ref();
+const props = defineProps(selectProps);
+const selectValue = ref(props.modelValue);
 const emit = defineEmits(["update:modelValue"]);
 
 const changeSelect = (val: string | number) => {

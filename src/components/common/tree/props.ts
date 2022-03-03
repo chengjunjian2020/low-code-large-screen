@@ -1,3 +1,0 @@
-const treeV2Props = {
-
-}

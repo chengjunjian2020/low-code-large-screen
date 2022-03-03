@@ -1,5 +1,5 @@
 <template>
-    <div class="home">
+    <div class="desigin-container">
         <Header />
         <Editor />
     </div>
@@ -16,3 +16,10 @@ export default defineComponent({
     },
 })
 </script>
+<style lang="less" scoped>
+.desigin-container {
+    background-color: #2e3134;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+</style>

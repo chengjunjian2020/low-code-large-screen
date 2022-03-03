@@ -1,11 +1,8 @@
 import type { PropType } from 'vue';
-interface optionItem {
-    name: string,
-    value: string | number
-}
+import { common } from "/@/type/component"
 const selectProps = {
     selectList: {
-        type: Array as PropType<optionItem[]>,
+        type: Array as PropType<common.optionItem[]>,
         default: []
     },
     allowCreate: {

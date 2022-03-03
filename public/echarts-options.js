@@ -22,6 +22,7 @@ let echartsOptions = [
         defaultValue: false,
         id: '81b46d4a-d891-4d80-98ed-ea594fec2f1c',
         parentId: '68f43ae4-5183-4749-9093-78e4a4ec391a',
+        // children: undefined,
       },
       {
         attribute: 'text',
