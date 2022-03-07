@@ -41,6 +41,10 @@ export default defineConfig({
         find: /\/@\//,
         replacement: pathResolve('src') + '/',
       },
+      {
+        find: /\/@\//,
+        replacement: pathResolve('public') + '/',
+      },
       // /#/xxxx => types/xxxx
       {
         find: /\/#\//,
