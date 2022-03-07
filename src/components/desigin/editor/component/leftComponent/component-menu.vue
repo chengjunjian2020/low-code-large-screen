@@ -11,16 +11,6 @@
             </div>
         </template>
     </Collapse>
-    <!-- <el-collapse class="collapse-wrapper" accordion v-model="collapseActive">
-        <el-collapse-item v-for="category in menuList" :key="category.categoryName">
-            <template #title>
-                <el-icon class="header-icon">
-                    <caret-right />
-                </el-icon>
-                {{ category.categoryName }}
-            </template>
-        </el-collapse-item>
-    </el-collapse>-->
 </template>
 
 <script lang="ts" setup>

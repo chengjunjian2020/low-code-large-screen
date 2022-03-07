@@ -3,7 +3,6 @@ enum componentSize {
     default = "default",
     small = "small"
 }
-
 export {
     componentSize
 }

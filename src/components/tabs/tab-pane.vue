@@ -18,7 +18,7 @@ export default defineComponent({
             //     get: () =>
             // })
         })
-        emitter.on('tab-value', (value) => { })
+        emitter.on('tab-value')
     },
 })
 </script>

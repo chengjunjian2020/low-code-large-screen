@@ -7,5 +7,11 @@ enum renderComponent {
     checkbox = "Checkbox",
     colorPicker = "colorPicker"
 }
-
-export default renderComponent;
+enum renderComponentListField {
+    Select = "selectList",
+    Radio = "radioList"
+}
+export {
+    renderComponent,
+    renderComponentListField
+};

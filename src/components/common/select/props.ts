@@ -14,7 +14,8 @@ const selectProps = {
         default: false
     },
     modelValue: {
-        type: String || Number,
+        type: String,
+        default: null
     },
 
 }

@@ -22,7 +22,7 @@ export default defineComponent({
             )
         })
         onUnmounted(() => {
-            emitter.off('tab-value', () => {})
+            emitter.off('tab-value', () => { })
         })
     },
 })

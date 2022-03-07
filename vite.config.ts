@@ -15,7 +15,9 @@ function pathResolve(dir: string) {
 export default defineConfig({
   plugins: [
     vue(),
-    vueJsx({}),
+    vueJsx({
+      enableObjectSlots: true
+    }),
     Components({
       resolvers: [
         ElementPlusResolver()

@@ -23,12 +23,14 @@
 import { ref } from "vue";
 import { selectProps } from "./props";
 const props = defineProps(selectProps);
-const selectValue = ref(props.modelValue);
-const emit = defineEmits(["update:modelValue"]);
+//todo
+const selectValue: string = ref(props.modelValue);
+const emit = defineEmits(["update:modelValue", 'onUpdate:modelValue']);
 
 const changeSelect = (val: string | number) => {
-    selectValue.value = val;
+    selectValue.value = val as string;
     emit("update:modelValue", val);
+    emit("onUpdate:modelValue", val);
 }
 </script>
 

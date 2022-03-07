@@ -6,7 +6,7 @@ const props = {
     size: {
         type: String as PropType<componentSize>,
         default: "small"
-    }
+    },
 }
 
 export default props

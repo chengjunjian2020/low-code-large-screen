@@ -1,55 +1,25 @@
 <template>
-  <div class="container">
-    <virtualTree :data="echartsOption" :height="208"></virtualTree>
-  </div>
+  <Radio :radioList="radioList" v-model="modelValue" @update:modelValue="input"></Radio>
 </template>
+
 <script lang="ts" setup>
-import echartsOption from "../../public/echarts-options";
-import { virtualTree } from "/@/components/common/";
-interface Tree {
-  id: string
-  label: string
-  children?: Tree[]
-}
+import { recursion } from "/@/common/utils/utils";
+import option from "../../public/echarts-options";
+import { Radio, Checkbox } from "/@/components/common";
+import { ref } from "vue";
+const modelValue = ref(true);
+const radioList = [
+  {
+    name: "111",
+    value: 1
+  }
+]
+recursion(option, 'children', (dataItem: any) => {
 
-const getKey = (prefix: string, id: number) => {
-  return `${prefix}-${id}`
+})
+const input = (e: any) => {
+  console.log(e);
 }
-
-const createData = (
-  maxDeep: number,
-  maxChildren: number,
-  minNodesNumber: number,
-  deep = 1,
-  key = 'node'
-): Tree[] => {
-  let id = 0
-  return new Array(minNodesNumber).fill(deep).map(() => {
-    const childrenNumber =
-      deep === maxDeep ? 0 : Math.round(Math.random() * maxChildren)
-    const nodeKey = getKey(key, ++id)
-    return {
-      id: nodeKey,
-      label: nodeKey,
-      children: childrenNumber
-        ? createData(maxDeep, maxChildren, childrenNumber, deep + 1, nodeKey)
-        : undefined,
-    }
-  })
-}
-const props = {
-  value: 'id',
-  label: 'label',
-  children: 'children',
-}
-const data = createData(4, 30, 40)
-console.log(echartsOption);
+console.log(option);
 </script>
-
-<style lang="less" scoped>
-.container {
-  width: 100vw;
-  height: 100vh;
-  background: #2e3134;
-}
-</style>
+  

@@ -9,12 +9,14 @@ export default defineComponent({
     name: "color",
     props: inputProps,
     emits: {
-        'update:modelValue': (val?: string) => true
+        'update:modelValue': (val?: string) => true,
+        'onUpdate:modelValue': (val?: string) => true
     },
     setup(props, context) {
-        const inputValue: Ref<string> = ref(props.modelValue);
+        const inputValue: Ref = ref(props.modelValue);
         watch(inputValue, (val) => {
             context.emit("update:modelValue", val);
+            context.emit("onUpdate:modelValue", val);
         })
         return () => <ElInput class={"low-code-input"} v-model={inputValue.value} />
     },

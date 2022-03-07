@@ -2,7 +2,7 @@ import type { PropType } from 'vue';
 
 interface collapseItem {
     title: string,
-    collapseItem: Array<any>
+    list: Array<any>
 
 }
 const collapseProps = {

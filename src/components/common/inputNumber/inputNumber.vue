@@ -14,16 +14,16 @@
 import inputNumberProps from "./props";
 import { ref, watch } from "vue";
 defineProps(inputNumberProps);
-const numberValue = ref(11);
-const emit = defineEmits(["update:modelValue"]);
+const numberValue = ref(0);
+const emit = defineEmits(["update:modelValue", 'onUpdate:modelValue']);
 // watch(() => props.modelValue, (val) => {
 //     numberValue.value = val;
 // }, {
 //     immediate: true,
 // })
 watch(numberValue, (val) => {
-    console.log(numberValue.value)
     emit('update:modelValue', val)
+    emit("onUpdate:modelValue", val);
 })
 </script>
 
@@ -47,6 +47,7 @@ watch(numberValue, (val) => {
             border-color: #16171b;
             transition: none;
             color: #fff;
+            text-align: left;
             &:active {
                 border-color: #00baff;
             }

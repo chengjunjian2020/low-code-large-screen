@@ -6,7 +6,7 @@ interface radioItem {
 }
 const props = {
     modelValue: {
-        type: String,
+        type: Boolean || String || Number,
     },
     radioList: {
         type: Array as PropType<radioItem[]>,
@@ -18,6 +18,4 @@ const props = {
     }
 }
 
-export {
-    props
-}
+export default props

@@ -12,7 +12,7 @@
 
 <script lang="ts" setup>
 import leftComponent from "./component/left-component.vue";
-import settingPanel from "./component/setting-panel.vue";
+import settingPanel from "./component/rightComponent.vue";
 </script>
 
 <style lang="less" scoped>
@@ -24,10 +24,10 @@ import settingPanel from "./component/setting-panel.vue";
         width: 410px;
     }
     .center-desigin {
-        width: calc(100vw - 410px - 310px);
+        width: calc(100vw - 410px - 410px);
     }
     .setting-wrapper {
-        width: 310px;
+        width: 410px;
     }
 }
 </style>
