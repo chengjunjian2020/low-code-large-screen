@@ -7,6 +7,7 @@ declare module 'vue' {
     Button: typeof import('./src/components/common/button/button.vue')['default']
     Collapse: typeof import('./src/components/common/collapse/collapse.vue')['default']
     ComponentMenu: typeof import('./src/components/desigin/editor/component/leftComponent/component-menu.vue')['default']
+    Echarts: typeof import('./src/components/common/echarts/echarts.vue')['default']
     Editor: typeof import('./src/components/desigin/editor/index.vue')['default']
     ElCollapse: typeof import('element-plus/es')['ElCollapse']
     ElCollapseItem: typeof import('element-plus/es')['ElCollapseItem']

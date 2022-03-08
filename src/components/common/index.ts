@@ -8,6 +8,7 @@ import Input from "./input/input";
 import Radio from "./radio/radio";
 import Checkbox from "./checkbox/checkbox";
 import tree from "./tree/tree.vue";
+import Echarts from "./echarts/echarts.vue";
 export {
     Button,
     Collapse,
@@ -18,5 +19,6 @@ export {
     Input,
     Radio,
     Checkbox,
-    tree
+    tree,
+    Echarts
 }
