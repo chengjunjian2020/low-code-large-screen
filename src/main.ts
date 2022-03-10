@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import * as ElIconModules from '@element-plus/icons-vue'
 import App from './App.vue'
 import 'virtual:svg-icons-register';
+import { createPinia } from "pinia";
 import './index.css'
 
 
@@ -12,7 +13,7 @@ import { Router } from './router';
 const app = createApp(App);
 
 app.use(Router);
-
+app.use(createPinia());
 //全局导入方式 类型兼容
 // function isValidKey(key: string | number | symbol, object: object): key is keyof typeof object {
 //     return key in object;

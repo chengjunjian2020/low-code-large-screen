@@ -3,7 +3,9 @@
         <div class="left-wrapper">
             <leftComponent></leftComponent>
         </div>
-        <div class="center-desigin"></div>
+        <div class="center-desigin">
+            <workspacerk></workspacerk>
+        </div>
         <div class="setting-wrapper">
             <settingPanel></settingPanel>
         </div>
@@ -12,6 +14,7 @@
 
 <script lang="ts" setup>
 import leftComponent from "./component/left-component.vue";
+import workspacerk from "./component/center-component.vue";
 import settingPanel from "./component/rightComponent.vue";
 </script>
 

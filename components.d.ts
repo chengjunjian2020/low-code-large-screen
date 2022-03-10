@@ -5,6 +5,7 @@
 declare module 'vue' {
   export interface GlobalComponents {
     Button: typeof import('./src/components/common/button/button.vue')['default']
+    CenterComponent: typeof import('./src/components/desigin/editor/component/center-component.vue')['default']
     Collapse: typeof import('./src/components/common/collapse/collapse.vue')['default']
     ComponentMenu: typeof import('./src/components/desigin/editor/component/leftComponent/component-menu.vue')['default']
     Echarts: typeof import('./src/components/common/echarts/echarts.vue')['default']
